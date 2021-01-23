@@ -1,2 +1,2 @@
 wordpress:
-  
+  ingress.hostname: wp.pegasus
