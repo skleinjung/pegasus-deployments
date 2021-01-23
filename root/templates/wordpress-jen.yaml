@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: wordpress-jen
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    helm: {}
+    path: applications/wordpress-jen
+    repoURL: https://github.com/skleinjung/pegasus-deployments.git
+    targetRevision: development
