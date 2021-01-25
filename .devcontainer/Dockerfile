@@ -26,11 +26,18 @@ RUN userdel vscode \
 # install arkade and useful tools
 RUN curl -sLS https://dl.get-arkade.dev | sh \
   && arkade get helm \
+  && arkade get kubectl \
+  && arkade get kubeseal \
   && arkade get kustomize \
   && arkade get terraform \
   && arkade get yq \
   && chmod +x /root/.arkade/bin/* \
   && mv /root/.arkade/bin/* /usr/local/bin/
+
+# install latest ArgoCD cli
+RUN VERSION=$(curl --silent "https://api.github.com/repos/argoproj/argo-cd/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/') \
+  && curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/$VERSION/argocd-linux-amd64 \
+  && chmod +x /usr/local/bin/argocd
   
 # install latest terraform (newer than arkade's)
 # RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add - && \
