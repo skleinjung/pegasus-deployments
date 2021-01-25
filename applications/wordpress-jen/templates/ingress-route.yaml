@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: wordpress-jen
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`wp.dev.pegasus`)
+      services:
+        - name: wordpress-jen
+          port: 80
+  tls:
+    certResolver: default
+    options: {}
+

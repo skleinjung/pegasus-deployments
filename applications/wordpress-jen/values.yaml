@@ -1,2 +1,4 @@
 wordpress:
-  ingress.hostname: wp.pegasus
+  ingress.hostname: wp.dev.pegasus
+  service:
+    type: ClusterIP
