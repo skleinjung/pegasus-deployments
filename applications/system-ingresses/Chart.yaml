@@ -1,0 +1,9 @@
+apiVersion: v2
+name: traefik
+description: A Helm chart for deploying ingresses for Pegasus cluster system components
+
+type: application
+
+version: 0.1.0
+appVersion: 0.1.0
+
