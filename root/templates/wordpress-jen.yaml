@@ -11,7 +11,7 @@ spec:
   source:
     path: applications/wordpress-jen
     repoURL: https://github.com/skleinjung/pegasus-deployments.git
-    targetRevision: development
+    targetRevision: {{ .Values.spec.source.targetRevision }}
 
   destination:
     namespace: default

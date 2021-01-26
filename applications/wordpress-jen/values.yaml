@@ -1,4 +1,10 @@
 wordpress:
-  ingress.hostname: wp.dev.pegasus
+  ingress.hostname: jenniferkleinjung.com
+  persistence:
+    enabled: true
+    storageClass: nfs
+    accessMode: ReadWriteMany
+    size: 100Gi
   service:
     type: ClusterIP
+  
