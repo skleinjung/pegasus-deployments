@@ -7,7 +7,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`wp.dev.pegasus`)
+      match: Host(`{{ .Values.hostname }}`)
       services:
         - name: wordpress-jen
           port: 80
