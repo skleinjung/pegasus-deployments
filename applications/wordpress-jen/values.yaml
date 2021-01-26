@@ -7,4 +7,10 @@ wordpress:
     size: 100Gi
   service:
     type: ClusterIP
+  wordpressBlogName: "Jen's Wordpress Site"
+  wordpressEmail: jenniferlkleinjung@gmail.com
+  wordpressFirstName: Jennifer
+  wordpressLastName: Kleinjung
+  wordpressScheme: http
+  wordpressUsername: jen
   
