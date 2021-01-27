@@ -12,6 +12,6 @@ spec:
         - name: wordpress-jen
           port: 80
   tls:
-    certResolver: staging
+    certResolver: production
     options: {}
 
