@@ -38,10 +38,10 @@ wordpress:
       httpHeaders:
       - name: X-Forwarded-Proto
         value: https
-    initialDelaySeconds: 90
+    initialDelaySeconds: 30
     periodSeconds: 10
     timeoutSeconds: 5
-    failureThreshold: 6
+    failureThreshold: 30
     successThreshold: 1
   service:
     type: ClusterIP
