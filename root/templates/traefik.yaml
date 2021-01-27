@@ -9,26 +9,15 @@ spec:
   project: default
 
   source:
-    path: traefik
-    repoURL: https://github.com/traefik/traefik-helm-chart.git
-    targetRevision: v9.13.0
+    path: applications/traefik
+    repoURL: https://github.com/skleinjung/pegasus-deployments.git
+    targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
       values: |
-        image:
-          tag: v2.4.0
-        ingressClass:
-          # something is weird with Helm Capabilities in Argo, so we cannot pass the check for this
-          enabled: false
-        ingressRoute:
-          dashboard:
-            enabled: false
-        resources:
-          limits:
-            cpu: "300m"
-            memory: "150Mi"
+        cloudflareApiToken: AgA/J3iPCZgUjGnHL6nhcgz5YuUr5pMFfbXOI2/OGBViP5lC9Wpv0IKUQMAcT39SJFn/NBduGBZgng94hSPc2qdA1RExX8WoSQOgkQj7eoO9DZqG9hBWORhGoyyOgpimbEVjd5CtqmNm9QSd/elT1WHO43ad1J4dmwvhd6AssiYowxefFdEgArYJOu/8viBORoM6GXS3PhDTaInHq1zXDR66SDsZb5aP2kEf6C9KUuBPl4T1Sj5ceJQjZOAJMN2lxIRWZB+dVG4YaoungD1is5gsSJJPk4NJ+KKtd5jyeB4++j+RgBWTRsJT0UvwefFQErQ1ZUgQuvYAUm82QZ3V1K365ncufxKvO5AGZczI4lLjb2jjSU4BNjVW4lpWpLJumCwNhXal1jzKA3URrsLk6DPPbAty8c5O1OD28u5It3Y2yAQXCzQnWVJVzwfG/wFWCW6XPr9r9tQZHTIT8rqLy09l4W9d/U9N/3HLcZDTbYYmk2UBOeT1YjdUaMFZVuP/zycYy0ParPlfsp3h68mDLa8nhBtoT/nQOepgNBDo18+39HHLkr2tVpc2F/zmpPXh8Qkt33k2V2aqLRtV7uwYCDK8hvkMpWptdw0rGLdo3X9b1PBJA5ZiWyV4JQMMVkG0PdOHuluIEih6h8vDUjzpYVKtUJnM9FrKBvvvBGMhdCYTcQHGO2GBrIYUxFWc+QVqhP8+AJK75qhWFeuMbPtCybbxRx9hjNLpgERbEsSWG1MpGWTPL2ih10bh
 
   destination:
-    namespace: default
+    namespace: traefik
     server: {{ .Values.spec.destination.server }}
 
   # Sync policy
