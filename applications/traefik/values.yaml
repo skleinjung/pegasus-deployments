@@ -1,15 +1,15 @@
 traefik:
   additionalArguments:
-    - --certificatesresolvers.production.acme.caserver="https://acme-v02.api.letsencrypt.org/directory"
+    - --certificatesresolvers.production.acme.caserver=https://acme-v02.api.letsencrypt.org/directory
     - --certificatesresolvers.production.acme.dnsChallenge.delaybeforecheck=0
     - --certificatesresolvers.production.acme.dnsChallenge.provider=cloudflare
     - --certificatesresolvers.production.acme.email=sean@thrashplay.com
-    - --certificatesresolvers.production.acme.storage="/etc/traefik/acme/certs-production.json"
-    - --certificatesresolvers.staging.acme.caserver="https://acme-staging-v02.api.letsencrypt.org/directory"
+    - --certificatesresolvers.production.acme.storage=/etc/traefik/acme/certs-production.json
+    - --certificatesresolvers.staging.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
     - --certificatesresolvers.staging.acme.dnsChallenge.delaybeforecheck=0
     - --certificatesresolvers.staging.acme.dnsChallenge.provider=cloudflare
     - --certificatesresolvers.staging.acme.email=sean@thrashplay.com
-    - --certificatesresolvers.staging.acme.storage="/etc/traefik/acme/certs-staging.json"
+    - --certificatesresolvers.staging.acme.storage=/etc/traefik/acme/certs-staging.json
   envFrom:
     - secretRef:
         name: acme-secrets
@@ -22,10 +22,12 @@ traefik:
     dashboard:
       enabled: false
   persistence:
-    enabled: true
     accessMode: ReadWriteOnce
-    size: 128Mi
+    enabled: true
     path: /etc/traefik/acme
+    size: 128Mi
+  podSecurityContext:
+    fsGroup: 65532
   resources:
     limits:
       cpu: "300m"
