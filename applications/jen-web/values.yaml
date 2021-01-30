@@ -63,11 +63,14 @@ wordpress:
     debug: true
   ingress:
     enabled: false
+    hostname: jenniferkleinjung.com
   livenessProbe:
     httpGet:
       httpHeaders:
         - name: X-Forwarded-Proto
           value: https
+      port: https
+      scheme: HTTPS
   mariadb:
     enabled: false
   persistence:
@@ -78,6 +81,8 @@ wordpress:
       httpHeaders:
         - name: X-Forwarded-Proto
           value: https
+      port: https
+      scheme: HTTPS
   resources:
     limits:
       memory: 512Mi
