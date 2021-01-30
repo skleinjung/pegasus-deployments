@@ -6,7 +6,9 @@ encryptedMariaDbPassword: AgB1Kdohk9ofN5i++ZNUCBfdcBcvhQejP8qebrwMy/+eXg2yObRhm2
 
 mariadb:
   auth:
+    database: jenwp
     existingSecret: jen-web-mariadb-db-secret
+    username: jenwp-a
   primary:
     resources:
       limits:
@@ -19,8 +21,6 @@ wordpress:
     existingSecret: jen-web-mariadb-db-secret
     host: jen-web-mariadb
     user: jenwp-a
-  extraEnvVarsCM: jen-web-wordpress-env
-  extraEnvVarsSecret: jen-web-wordpress-db-secret
   ingress:
     enabled: false
   mariadb:
