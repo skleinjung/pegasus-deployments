@@ -1,18 +1,56 @@
 hostname: jenniferkleinjung.com
 
-encryptedMariaDbRootPassword: AgBkDVh2HRVV4Jb9MOFo9+YFu5B2H5Mie6HskP9ehwXuIWnLN0iIQHPun7kLamL3WIJGTVYGQa9dZSRAdy92OcKRZQAOKdB5HJOzArXZeBW0u7qEFm41DtPZSe/jv2s3WkcvV2GWNSCfa34620lPWcXt1JDRSI7KbIiSaRhoDL08Euxe1fS8xl0cz9e9+De4tXFeafHF3Hjzb5+vRrs11KrdPnJ+im6vU/OlEUYYRpeLh/l1kvRRyQYfTgKnTSoW3mD7CT7+YzTxO6OLohZWkIQpDRsumwoOYglUzlS8KQrMneqDoY9X9QNYkTEaR9p08UfsBO8jrZTnJLznRzg/BOGhBX0/sRBfB/E8uxGTFG99tJyk6pQzwY39KCRTSyjueriOLBPmzc9VmKjOE/YDqXCggn7pBGfnFDGSDvbw0qCDB0jPYoS4HDjg4Rc7TLYDJip3xMVMrrQQHAo+yGQSB2q2z8w3YCA799HcVnN6rzeVNXg1ZtZij/aKMEea8+rNnOp5Vw0Jqz4w+x4zADGM7jMNT5VP+sh0gBwLziQXB8ruBF0gR4g4oZR3pVXHrBZ7FtbB8U/bUmEszV+fNaEliwPyc6JZSFxS3DZQ8B4O4J/zVDbFpcAyzexQxd7f6o3hxogPy7JvtsgisZAxuamEx2LVt3DjVLjxyUYVQsfjK61knUX/B37P/PMCJvtt2FKliWfNS/Ce/r6B/eQKrIafP/fRmSwarju+sljVrP1OMwuA
-encryptedMariaDbReplicationPassword: AgCJaQTX7yr41CtHcLn3hg6rG7/vq7xwSWD2c6rbR9zDedza5+XWnm+4ZFT1gUtqN1xg3d7rpdhx7wcEJ7dD9C4fbJc6ZqQyjZwWTE8DAf/+cOMk4/xT7SAdPAQc37QDmZ97H9c62v/kGgbQE0xaE1aAFm0tbEegg3Mbj7CsyWTuFXuuMwZOf++bAu6XM9V6TsWxxZUzZYyI0Me3AI3h0q+JhLfJGWaK1Cdv1Xa+CzUxGakTJCtD8je83ce7SegJlLhVATrwT3NX8irN0+cA+7sPqZPgS2EVROBs1hGEQvFBrAk+46kimmp3qZR3H87S50NxC2G2BGMR98gfEwItDW9ro/zbQee9OpqZG/7/DsICSz9hyE41oUOlTIbqfpX3mmhWS+FgxcnBmiR0Qb0hK3J8wgboi0zmwe2hdlFN/MHlFEBf0YWTDgTPn73miCiuE2dI2+/GS1aV9+4SvOkNDb/UNPrdHSJn5s2Tk2UD0U3QWZr5x+07SqAo72kIO6vHxOvwCa3KuZQxmQeAsquEzbbKx65wLTHVcHW589XtZsX6OR885IkYb7tcOiMCnqAqHTTtzn7NneJn6chHZsOEWgJ4Dt6/Q0C/Jn/Q072iLQvSLMA3awftqAWyd8xJrVPFAPFC9ZDNintAjJq5bhlbBlcAIK+DRgySHeu0fwycld5Ap1UdUVFbh3uVLvU+MoxDVEcX+xqabFZV5Bt4Kd+IUq+ywJ5TnEFtLZ5KSRA=
-encryptedMariaDbPassword: AgB1Kdohk9ofN5i++ZNUCBfdcBcvhQejP8qebrwMy/+eXg2yObRhm2n6CQVh80iOGPlC7MsUTp/tmY1BpxHPp7eMzaeQCKP8gIno2BlHJXIsXneobnK+4hfUwD01kH39QqV0l3X+0pB7VDvmD9J2OJ1DCDMw/6H26w1AE9k5L0SAmoDG4EyEWwISiCt7MR06kl0bJSPl59ceVub7Y3R3EfedA2t802Xsgn7RFqohR72qF4+PqUuBGS6yX2/2+VHYLDnpmP/j7Xvt71M/1lOK+no2I5C3XAZoO50Pw42Na7T2w16bdbhI0mea4csfYqedF9lP12R7JdSOC1fjQoOKZvlFQVwRjYIm5AOrnEpG4Bq0nkZtD91JP6xHjv4aLZCMs8LlbRHST3T9TFGEQy156BiZTdSrC7xig0pI6b6MPRcQirfHOIMb4pdX+a0a/8Jpwb1HcRPBYLIcTrjdp0Giw5m5MjjNf43ZcPRCtOv0KqF53fVmmR40QXv3ASFNKIjcZ5O8HE8BHzlJxdsstojUvn/gbWtqF08LjZrPDQKkCKw1KgbPUv521BDAWwqh92A+0cNbn5EyzcauAoT3VYOuQO7G061avfkF8yHtwHk7AhKmBlITx7xZSdwYIFqA5t1H3hdEgsXBJjwNxdEE5SSZ8IaBCKE2FAoVsW/EsxpPnUo83frhhATcyVeWxxSLWDEtRL22OGa1tOYtRKqkcsUEfD8AKDatB399NfLrNg==
+encryptedMariaDbRootPassword: AgBeZGbV1I6NRych3M2Te7q6oH+XTypTdOdtJPYqNPfZeoc9wszPWXw7spzbQAc/nrrDm+DH3LSgfxobtiXDxB6xmP/JML9ErdpiFOgGtVq7dFrpJO+seRNE/4A+PaWC4QlUfoqJ6vN03j99fAksOSoREFbH865CZstY/eHjwK287pbg5OTpdVN6MdQhSBMz7kjoiS7tUZWbFrkcy1hAZtMCLcErsiDOTJZ021aOO+9VSjk8vEd9E4eozPX5Gimr0VFM0As5MhjClR9bFfWT7eQxXJFP2sMYh4gW45YpR9fKKxbBBYHfUUs4xUfDHYp3ocntSTzxj4ywRKCjBoKEwlRK/PdowfBz2+WC2bNcWLUx//6rNyguQupd+cgJUXdV4eVP7ML2Z2ZijP3Z8fv13/8hG/gcSjudIpHJ+Cl39ocyXvIJCZ7JRmrpeCfSL26zxS/gSeng1wFIzCQG7aclO80XvlH0pDRpsNAGKRoCiif1WG0ODkPEppVLmfd04UJ/rR2/Z6C5c/HkR8aBhN/4ewNL/3uCY21Dgk/eQL6hCffbBm98HTydMseXoJPZtlOL62xvZrd2IJSRBaGyRSjjjpg0rIPUMHJoZ5CnUyDI67rgvO+wxY3vBQn8w/h8UlYMVgiNOBilpxChRGurtzpYopJkEMjVuM4gEjy6A8WvvdAa9/3qKBrWC6VHkV+5vUgYzn2P5xg/xgWO9EQ9XAQFiDg5GpGm3B21T/8I4e6PERGw+hI=
+encryptedMariaDbReplicationPassword: AgB6KNgOMqJLEJGziY+/O3Srl3NWS4oSlNBJk1I+ROtkE8ntF8hYHU0AFjucplGJpfEw/oFrR5d+R+XKHaSEJ2xCS7Sw7XbHK45iucvD9uolfJTfFIt8vAifTSYKRQSsO5NEjv0SFWHKQRy3uE5yJEvFVFsqLV0bjqLYHz0Z7jjQylMmifyw87qROpGXOrlzSXOc4FAx+Nzj2sMCTt3KVndCky2Sy2Wec2SqXbqZAe0UaenXlxMLuMli9aQfVjY5OnQVVmBpsmbjT1bzIX26x7IhKuyjYbJXTR/YIm0jH2fPKfdbsqTHrg74mj7x6PiFodGk/IbyUfPIPd4MaGIpQeUn8UcahLGfD/ys3wRnvE8HcduGbcEbmlzzzE8Kd6uW6v5WayTrVc91PthWY4GB+YpjJdR4jC9/kq8hzungc2iPT5ImhwMpzUy+NgBl3tlwB0h0PfMOJFpCeMfLEBAhlUlAO1BAbQbZh4h5Yyf26fv5ZlGcm5Sjg8IMrKpdFUigZNyIpJkxmIEckOx3EE+mZe+cuGBk94/v2EP1CX1vsb8sVRz07QED63LTyigh1DmhO6u5OZ8EMYd2JOFY01nr5XnGJH7xzDQeSiJ3elTaM26br1TwwoXMwFdevaZw1g2s8t0Qd0rmB6TIWcc4XSigOiOK8HBiZZSjXzZ+BPdkkng0eyeNuEu4JU1zttXcQLQnpBtfaOfmFTYdrDbo2eKV0AVCiOSJGEwJouQSOAt3yVG2
+encryptedMariaDbPassword: AgAWgLeEupRB02pB7irMJV4Jj23KxTE3wyZyroLyqY8snJwf+/nHMjbAUJVCXBtaY9t7iXeC1pFikgnnP/FpUwmv26VC26IWihUS9LK72UEH3t4twEWfEWoVu+yqT8J/rZhqRuNTHuOOvMJMU+Ys24behR5m9MtUVIMv3k8/XF4LpCM7LCKORK8+yBXXmZMblkK4ivf6x8hiN7IfUaLPGR4gVvAMDnsa5HZpKFtrtTav55UqWgRxcHuP/ldz/Bd3+GHV/sVAYktNfXnzaKSi4LlMnPC32TfV9lOIe1Gr6MoJCqtdRMW1g+thUgF3LS/Nbn/8dUQcigFyKjSBBE8R6Ntg2rmsJ/IM//P6+Fc5sU1VOBJ8dgJnauRgUMK6RJPcopg8PKe6qLzrEZShauwiDkkOyLr7K8DI5UD3w0Lhup6Num0Vfi/YDtHhwKkgEFGTUTqLAnYh+mkgpax7O3n+T1IQ4aB3J9eMKdO+TYjIvE01nE7h+KE6N8IeBqlluvWygxQNk/+bkp4uSHVcp+7UER6wRmUPJpKusbNCoOQEFm1GiiHzILurUpH688AwCX0f7JG0l5FzmbWhmxlgcLHIDDYUZ/qFhDCMPBfNH10Zp275j0ihicC0eCDqBN/4rItJNa3wj6r8LF0TzMMEEc9t+/GN8Ejb55qMhu6LgmZGMAi8zBT4gn4Qd2nMhEzP2oQLawNrw7q1yu3kvDXpWftF5F0MhbXqECs77PJwzTMk4w==
 
 mariadb:
   auth:
     database: jenwp
     existingSecret: jen-web-mariadb-db-secret
     username: jenwp-a
+  image:
+    debug: false
   primary:
+    configuration: |-
+      [mysqld]
+      basedir=/opt/bitnami/mariadb
+      bind-address=0.0.0.0
+      character-set-server=UTF8
+      collation-server=utf8_general_ci
+      explicit_defaults_for_timestamp
+      log-error=/opt/bitnami/mariadb/logs/mysqld.log
+      max_allowed_packet=16M
+      # this is needed to run in memory-limited environments
+      performance_schema=off
+      pid-file=/opt/bitnami/mariadb/tmp/mysqld.pid
+      plugin_dir=/opt/bitnami/mariadb/plugin
+      port=3306
+      skip-name-resolve
+      socket=/opt/bitnami/mariadb/tmp/mysql.sock
+      tmpdir=/opt/bitnami/mariadb/tmp
+
+      [client]
+      default-character-set=UTF8
+      plugin_dir=/opt/bitnami/mariadb/plugin
+      port=3306
+      socket=/opt/bitnami/mariadb/tmp/mysql.sock
+
+      [manager]
+      pid-file=/opt/bitnami/mariadb/tmp/mysqld.pid
+      port=3306
+      socket=/opt/bitnami/mariadb/tmp/mysql.sock
+    persistence:
+      enabled: true
+      existingClaim: jen-web-mariadb
     resources:
       limits:
-        memory: 256Mi
+        memory: 1024Mi
+      requests:
+        cpu: 250m
+        memory: 512Mi
+  # volumePermissions:
+  #   enabled: true
 
 wordpress:
   allowEmptyPassword: false
@@ -21,20 +59,38 @@ wordpress:
     existingSecret: jen-web-mariadb-db-secret
     host: jen-web-mariadb
     user: jenwp-a
+  image:
+    debug: true
   ingress:
     enabled: false
+  livenessProbe:
+    httpGet:
+      httpHeaders:
+        - name: X-Forwarded-Proto
+          value: https
   mariadb:
     enabled: false
   persistence:
     enabled: true
-    accessMode: ReadWriteMany
-    size: 100Gi
+    existingClaim: jen-web-wordpress
+  readinessProbe:
+    httpGet:
+      httpHeaders:
+        - name: X-Forwarded-Proto
+          value: https
+  resources:
+    limits:
+      memory: 512Mi
+    requests:
+      cpu: 250m
+      memory: 256Mi
   service:
     type: ClusterIP
   wordpressBlogName: "Jen's Wordpress Site"
   wordpressEmail: jenniferlkleinjung@gmail.com
   wordpressFirstName: Jennifer
   wordpressLastName: Kleinjung
-  wordpressScheme: http
+  wordpressScheme: https
+  wordpressSkipInstall: true
   wordpressUsername: jen
   
