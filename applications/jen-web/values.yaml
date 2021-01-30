@@ -1,0 +1,35 @@
+hostname: jenniferkleinjung.com
+
+encryptedMariaDbRootPassword: AgBkDVh2HRVV4Jb9MOFo9+YFu5B2H5Mie6HskP9ehwXuIWnLN0iIQHPun7kLamL3WIJGTVYGQa9dZSRAdy92OcKRZQAOKdB5HJOzArXZeBW0u7qEFm41DtPZSe/jv2s3WkcvV2GWNSCfa34620lPWcXt1JDRSI7KbIiSaRhoDL08Euxe1fS8xl0cz9e9+De4tXFeafHF3Hjzb5+vRrs11KrdPnJ+im6vU/OlEUYYRpeLh/l1kvRRyQYfTgKnTSoW3mD7CT7+YzTxO6OLohZWkIQpDRsumwoOYglUzlS8KQrMneqDoY9X9QNYkTEaR9p08UfsBO8jrZTnJLznRzg/BOGhBX0/sRBfB/E8uxGTFG99tJyk6pQzwY39KCRTSyjueriOLBPmzc9VmKjOE/YDqXCggn7pBGfnFDGSDvbw0qCDB0jPYoS4HDjg4Rc7TLYDJip3xMVMrrQQHAo+yGQSB2q2z8w3YCA799HcVnN6rzeVNXg1ZtZij/aKMEea8+rNnOp5Vw0Jqz4w+x4zADGM7jMNT5VP+sh0gBwLziQXB8ruBF0gR4g4oZR3pVXHrBZ7FtbB8U/bUmEszV+fNaEliwPyc6JZSFxS3DZQ8B4O4J/zVDbFpcAyzexQxd7f6o3hxogPy7JvtsgisZAxuamEx2LVt3DjVLjxyUYVQsfjK61knUX/B37P/PMCJvtt2FKliWfNS/Ce/r6B/eQKrIafP/fRmSwarju+sljVrP1OMwuA
+encryptedMariaDbReplicationPassword: AgCJaQTX7yr41CtHcLn3hg6rG7/vq7xwSWD2c6rbR9zDedza5+XWnm+4ZFT1gUtqN1xg3d7rpdhx7wcEJ7dD9C4fbJc6ZqQyjZwWTE8DAf/+cOMk4/xT7SAdPAQc37QDmZ97H9c62v/kGgbQE0xaE1aAFm0tbEegg3Mbj7CsyWTuFXuuMwZOf++bAu6XM9V6TsWxxZUzZYyI0Me3AI3h0q+JhLfJGWaK1Cdv1Xa+CzUxGakTJCtD8je83ce7SegJlLhVATrwT3NX8irN0+cA+7sPqZPgS2EVROBs1hGEQvFBrAk+46kimmp3qZR3H87S50NxC2G2BGMR98gfEwItDW9ro/zbQee9OpqZG/7/DsICSz9hyE41oUOlTIbqfpX3mmhWS+FgxcnBmiR0Qb0hK3J8wgboi0zmwe2hdlFN/MHlFEBf0YWTDgTPn73miCiuE2dI2+/GS1aV9+4SvOkNDb/UNPrdHSJn5s2Tk2UD0U3QWZr5x+07SqAo72kIO6vHxOvwCa3KuZQxmQeAsquEzbbKx65wLTHVcHW589XtZsX6OR885IkYb7tcOiMCnqAqHTTtzn7NneJn6chHZsOEWgJ4Dt6/Q0C/Jn/Q072iLQvSLMA3awftqAWyd8xJrVPFAPFC9ZDNintAjJq5bhlbBlcAIK+DRgySHeu0fwycld5Ap1UdUVFbh3uVLvU+MoxDVEcX+xqabFZV5Bt4Kd+IUq+ywJ5TnEFtLZ5KSRA=
+encryptedMariaDbPassword: AgB1Kdohk9ofN5i++ZNUCBfdcBcvhQejP8qebrwMy/+eXg2yObRhm2n6CQVh80iOGPlC7MsUTp/tmY1BpxHPp7eMzaeQCKP8gIno2BlHJXIsXneobnK+4hfUwD01kH39QqV0l3X+0pB7VDvmD9J2OJ1DCDMw/6H26w1AE9k5L0SAmoDG4EyEWwISiCt7MR06kl0bJSPl59ceVub7Y3R3EfedA2t802Xsgn7RFqohR72qF4+PqUuBGS6yX2/2+VHYLDnpmP/j7Xvt71M/1lOK+no2I5C3XAZoO50Pw42Na7T2w16bdbhI0mea4csfYqedF9lP12R7JdSOC1fjQoOKZvlFQVwRjYIm5AOrnEpG4Bq0nkZtD91JP6xHjv4aLZCMs8LlbRHST3T9TFGEQy156BiZTdSrC7xig0pI6b6MPRcQirfHOIMb4pdX+a0a/8Jpwb1HcRPBYLIcTrjdp0Giw5m5MjjNf43ZcPRCtOv0KqF53fVmmR40QXv3ASFNKIjcZ5O8HE8BHzlJxdsstojUvn/gbWtqF08LjZrPDQKkCKw1KgbPUv521BDAWwqh92A+0cNbn5EyzcauAoT3VYOuQO7G061avfkF8yHtwHk7AhKmBlITx7xZSdwYIFqA5t1H3hdEgsXBJjwNxdEE5SSZ8IaBCKE2FAoVsW/EsxpPnUo83frhhATcyVeWxxSLWDEtRL22OGa1tOYtRKqkcsUEfD8AKDatB399NfLrNg==
+
+mariadb:
+  auth:
+    existingSecret: jen-web-mariadb-db-secret
+  primary:
+    resources:
+      limits:
+        memory: 256Mi
+
+wordpress:
+  extraEnvVars:
+  extraEnvVarsCM: jen-web-wordpress-env
+  extraEnvVarsSecret: jen-web-wordpress-db-secret
+  ingress:
+    enabled: false
+  mariadb:
+    enabled: false
+  persistence:
+    enabled: true
+    accessMode: ReadWriteMany
+    size: 100Gi
+  service:
+    type: ClusterIP
+  wordpressBlogName: "Jen's Wordpress Site"
+  wordpressEmail: jenniferlkleinjung@gmail.com
+  wordpressFirstName: Jennifer
+  wordpressLastName: Kleinjung
+  wordpressScheme: http
+  wordpressUsername: jen
+  

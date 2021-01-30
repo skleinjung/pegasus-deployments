@@ -102,3 +102,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+# unfortunately, we cannot use Chart.lock files with ArgoCD
+# See: https://github.com/argoproj/argo-cd/pull/3290/commits/8a0af84b63d6f0a6036090c6207ed411aed4acd0
+# See: https://github.com/helm/helm/issues/8036
+**/Chart.lock
