@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: jen-web-wordpress-env
-data:
-  MARIADB_HOST: jen-web-mariadb
-  WORDPRESS_DATABASE_NAME: jenwp
-  WORDPRESS_DATABASE_USER: jenwp-a
-  ALLOW_EMPTY_PASSWORD: "no"

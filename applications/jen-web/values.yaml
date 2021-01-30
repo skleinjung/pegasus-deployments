@@ -13,7 +13,12 @@ mariadb:
         memory: 256Mi
 
 wordpress:
-  extraEnvVars:
+  allowEmptyPassword: false
+  externalDatabase:
+    database: jenwp
+    existingSecret: jen-web-mariadb-db-secret
+    host: jen-web-mariadb
+    user: jenwp-a
   extraEnvVarsCM: jen-web-wordpress-env
   extraEnvVarsSecret: jen-web-wordpress-db-secret
   ingress:
