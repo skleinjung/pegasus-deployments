@@ -14,4 +14,5 @@ spec:
     path: applications/jen-web
     repoURL: https://github.com/skleinjung/pegasus-deployments.git
     targetRevision: {{ .Values.spec.source.targetRevision }}
-
+    valueFiles:
+    - values-prod.yaml

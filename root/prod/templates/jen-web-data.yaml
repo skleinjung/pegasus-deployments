@@ -14,4 +14,3 @@ spec:
     path: applications/jen-web-data
     repoURL: https://github.com/skleinjung/pegasus-deployments.git
     targetRevision: {{ .Values.spec.source.targetRevision }}
-
