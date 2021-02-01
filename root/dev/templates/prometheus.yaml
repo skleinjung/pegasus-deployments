@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: metallb
+  name: prometheus
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    path: applications/metallb/dev
+    path: applications/prometheus
     repoURL: https://github.com/skleinjung/pegasus-deployments.git
     targetRevision: {{ .Values.spec.source.targetRevision }}
 
