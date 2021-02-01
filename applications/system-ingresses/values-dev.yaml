@@ -1,0 +1,2 @@
+argocdHost: argocd.dev.pegasus
+traefikHost: traefik.dev.pegasus
