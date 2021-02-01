@@ -19,16 +19,3 @@ spec:
   destination:
     namespace: traefik
     server: {{ .Values.spec.destination.server }}
-
-  # Sync policy
-  syncPolicy:
-    automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
-      prune: true
-    syncOptions:
-    - CreateNamespace=true
-    retry:
-      limit: -1
-      backoff:
-        duration: 5s
-        factor: 2
-        maxDuration: 3m

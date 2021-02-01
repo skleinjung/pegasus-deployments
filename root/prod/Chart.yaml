@@ -1,6 +1,6 @@
 apiVersion: v2
 name: root
-description: Root Helm chart for applications in this branch's environment
+description: Root Helm chart for applications in the prod environment
 
 type: application
 
