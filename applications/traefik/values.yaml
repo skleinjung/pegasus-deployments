@@ -10,6 +10,7 @@ traefik:
     - --certificatesresolvers.staging.acme.dnsChallenge.provider=cloudflare
     - --certificatesresolvers.staging.acme.email=sean@thrashplay.com
     - --certificatesresolvers.staging.acme.storage=/etc/traefik/acme/certs-staging.json
+    - --entrypoints.web.forwardedheaders.trustedips=10.0.0.0/8
   envFrom:
     - secretRef:
         name: acme-secrets
