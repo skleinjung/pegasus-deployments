@@ -1,0 +1,7 @@
+functionNamespace: openfaas-fn
+traefik:
+  entryPoints:
+  - web
+  host: api.dev.thrashplay.com
+  serviceName: gateway-external
+  servicePort: 8080

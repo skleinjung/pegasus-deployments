@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openfaas
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: openfaas
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: applications/openfaas
+    repoURL: https://github.com/skleinjung/pegasus-deployments.git
+    targetRevision: {{ .Values.spec.source.targetRevision }}
+    helm:
+      valueFiles:
+      - values-dev.yaml
