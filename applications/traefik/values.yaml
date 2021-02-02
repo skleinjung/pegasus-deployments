@@ -1,10 +1,11 @@
 traefik:
   additionalArguments:
-    - --certificatesresolvers.production.acme.caserver=https://acme-v02.api.letsencrypt.org/directory
-    - --certificatesresolvers.production.acme.dnsChallenge.delaybeforecheck=0
-    - --certificatesresolvers.production.acme.dnsChallenge.provider=cloudflare
-    - --certificatesresolvers.production.acme.email=sean@thrashplay.com
-    - --certificatesresolvers.production.acme.storage=/etc/traefik/acme/certs-production.json
+    # we currently handle this in the load balancer.. disable to avoid hitting rate limit by mistake
+    # - --certificatesresolvers.production.acme.caserver=https://acme-v02.api.letsencrypt.org/directory
+    # - --certificatesresolvers.production.acme.dnsChallenge.delaybeforecheck=0
+    # - --certificatesresolvers.production.acme.dnsChallenge.provider=cloudflare
+    # - --certificatesresolvers.production.acme.email=sean@thrashplay.com
+    # - --certificatesresolvers.production.acme.storage=/etc/traefik/acme/certs-production.json
     - --certificatesresolvers.staging.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
     - --certificatesresolvers.staging.acme.dnsChallenge.delaybeforecheck=0
     - --certificatesresolvers.staging.acme.dnsChallenge.provider=cloudflare

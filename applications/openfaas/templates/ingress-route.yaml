@@ -1,0 +1,12 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: openfaas-gateway
+spec:
+  entryPoints: {{ .Values.traefik.entryPoints }}
+  routes:
+    - match: Host(`{{ .Values.traefik.host }}`)
+      kind: Rule
+      services:
+        - name: {{ .Values.traefik.serviceName }}
+          port: {{ .Values.traefik.servicePort }}
