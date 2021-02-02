@@ -4,14 +4,10 @@ metadata:
   name: jen-web-wordpress
 spec:
   entryPoints:
-    - websecure
+    - web
   routes:
     - kind: Rule
       match: Host(`{{ .Values.hostname }}`)
       services:
         - name: jen-web-wordpress
           port: 80
-  tls:
-    certResolver: production
-    options: {}
-
