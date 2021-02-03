@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`prometheus.dev.pegasus`)
+    - match: Host(`prometheus.dev.thrashplay.com`)
       kind: Rule
       services:
         - name: prometheus
