@@ -36,7 +36,7 @@ kube-prometheus-stack:
   ##
   grafana:
     defaultDashboardsEnabled: true
-    adminPassword: prom-operator
+    adminPassword: 
 
     ingress:
       annotations:
