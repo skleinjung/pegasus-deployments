@@ -35,16 +35,17 @@ kube-prometheus-stack:
   ## Using default values from https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
   ##
   grafana:
+    admin:
+      existingSecret: grafana-credentials
     defaultDashboardsEnabled: true
-    adminPassword: 
-
     ingress:
       annotations:
         traefik.ingress.kubernetes.io/router.entrypoints: web
       enabled: true
-      hosts:
-      - grafana.dev.thrashplay.com
       path: /
+    sidecar:
+      dashboards:
+        searchNamespace: ALL
 
   ## Deploy a Prometheus instance
   ##
