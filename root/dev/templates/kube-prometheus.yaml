@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prometheus
+  name: kube-prometheus
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -9,12 +9,12 @@ spec:
   project: default
 
   source:
-    path: applications/prometheus
+    path: applications/kube-prometheus
     repoURL: https://github.com/skleinjung/pegasus-deployments.git
     targetRevision: {{ .Values.spec.source.targetRevision }}
 
   destination:
-    namespace: default
+    namespace: monitoring
     server: {{ .Values.spec.destination.server }}
 
   # Sync policy
