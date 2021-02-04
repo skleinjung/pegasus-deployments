@@ -1,23 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openfaas
+  name: kube-prometheus
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: openfaas
+    namespace: monitoring
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: applications/openfaas
+    path: applications/kube-prometheus
     repoURL: https://github.com/skleinjung/pegasus-deployments.git
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
       valueFiles:
-      - values-dev.yaml
-
+      - values-prod.yaml
+  # Sync policy
   syncPolicy:
     automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
       prune: true

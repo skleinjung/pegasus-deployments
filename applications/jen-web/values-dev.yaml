@@ -5,12 +5,6 @@ encryptedMariaDbReplicationPassword: AgB6KNgOMqJLEJGziY+/O3Srl3NWS4oSlNBJk1I+ROt
 encryptedMariaDbPassword: AgAWgLeEupRB02pB7irMJV4Jj23KxTE3wyZyroLyqY8snJwf+/nHMjbAUJVCXBtaY9t7iXeC1pFikgnnP/FpUwmv26VC26IWihUS9LK72UEH3t4twEWfEWoVu+yqT8J/rZhqRuNTHuOOvMJMU+Ys24behR5m9MtUVIMv3k8/XF4LpCM7LCKORK8+yBXXmZMblkK4ivf6x8hiN7IfUaLPGR4gVvAMDnsa5HZpKFtrtTav55UqWgRxcHuP/ldz/Bd3+GHV/sVAYktNfXnzaKSi4LlMnPC32TfV9lOIe1Gr6MoJCqtdRMW1g+thUgF3LS/Nbn/8dUQcigFyKjSBBE8R6Ntg2rmsJ/IM//P6+Fc5sU1VOBJ8dgJnauRgUMK6RJPcopg8PKe6qLzrEZShauwiDkkOyLr7K8DI5UD3w0Lhup6Num0Vfi/YDtHhwKkgEFGTUTqLAnYh+mkgpax7O3n+T1IQ4aB3J9eMKdO+TYjIvE01nE7h+KE6N8IeBqlluvWygxQNk/+bkp4uSHVcp+7UER6wRmUPJpKusbNCoOQEFm1GiiHzILurUpH688AwCX0f7JG0l5FzmbWhmxlgcLHIDDYUZ/qFhDCMPBfNH10Zp275j0ihicC0eCDqBN/4rItJNa3wj6r8LF0TzMMEEc9t+/GN8Ejb55qMhu6LgmZGMAi8zBT4gn4Qd2nMhEzP2oQLawNrw7q1yu3kvDXpWftF5F0MhbXqECs77PJwzTMk4w==
 
 mariadb:
-  metrics:
-    enabled: true
-    serviceMonitor:
-      additionalLabels:
-        release: kube-prometheus
-      enabled: true
   primary:
     persistence:
       existingClaim: ''
