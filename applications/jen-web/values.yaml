@@ -6,6 +6,12 @@ mariadb:
     username: jenwp-a
   image:
     debug: false
+  metrics:
+    enabled: true
+    serviceMonitor:
+      additionalLabels:
+        release: kube-prometheus
+      enabled: true
   primary:
     configuration: |-
       [mysqld]
