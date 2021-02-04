@@ -43,6 +43,8 @@ kube-prometheus-stack:
         traefik.ingress.kubernetes.io/router.entrypoints: web
       enabled: true
       path: /
+    plugins:
+    - grafana-piechart-panel
     sidecar:
       dashboards:
         searchNamespace: ALL
