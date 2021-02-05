@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pgo-deployer-cm
+  namespace: pgo
+data:
+  values.yaml: |-
+{{ .Values.config | toYaml | indent 4 }}

@@ -1,0 +1,8 @@
+apiVersion: v2
+name: postgres-operator
+description: Helm chart for install the postgres-operator
+
+type: application
+
+version: 0.1.0
+appVersion: 4.6.0
