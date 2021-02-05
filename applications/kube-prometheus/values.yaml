@@ -81,3 +81,8 @@ kube-prometheus-stack:
         # - secretName: prometheus-general-tls
         #   hosts:
         #     - prometheus.example.com
+
+  prometheusOperator:
+    admissionWebhooks:
+      # this wreaks havoc on argocd sync, so let's disable it
+      enabled: false
