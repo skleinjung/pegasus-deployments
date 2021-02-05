@@ -52,6 +52,7 @@ mariadb:
 
 wordpress:
   allowEmptyPassword: false
+  existingSecret: jen-web-wordpress-secret
   externalDatabase:
     database: jenwp
     existingSecret: jen-web-mariadb-db-secret
@@ -89,4 +90,5 @@ wordpress:
     type: ClusterIP
   wordpressScheme: https
   wordpressSkipInstall: true
+  wordpressUsername: sean
   
