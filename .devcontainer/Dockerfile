@@ -23,6 +23,11 @@ RUN userdel vscode \
 #     google-cloud-sdk-pubsub-emulator && \
 #   rm -rf /var/lib/apt/lists/*
 
+# [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
+COPY requirements.txt /tmp/pip-tmp/
+RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
+   && rm -rf /tmp/pip-tmp
+
 # install arkade and useful tools
 RUN curl -sLS https://dl.get-arkade.dev | sh \
   && arkade get helm \
@@ -38,6 +43,18 @@ RUN curl -sLS https://dl.get-arkade.dev | sh \
 RUN VERSION=$(curl --silent "https://api.github.com/repos/argoproj/argo-cd/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/') \
   && curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/$VERSION/argocd-linux-amd64 \
   && chmod +x /usr/local/bin/argocd
+
+# prepare postgres-operator client
+# must run 'pgo-setup.sh' after configuring kubectl for a cluster
+RUN curl https://raw.githubusercontent.com/CrunchyData/postgres-operator/v4.6.0/installers/kubectl/client-setup.sh > /usr/local/bin/pgo-setup.sh \
+  && chmod +x /usr/local/bin/pgo-setup.sh \
+  && echo "export PGOUSER='/home/$USERNAME/.pgo/pgo/pgouser'" >> /home/$USERNAME/.bashrc \
+  && echo "export PGO_CA_CERT='/home/$USERNAME/.pgo/pgo/client.crt'" >> /home/$USERNAME/.bashrc \
+  && echo "export PGO_CLIENT_CERT='/home/$USERNAME/.pgo/pgo/client.crt'" >> /home/$USERNAME/.bashrc \
+  && echo "export PGO_CLIENT_KEY='/home/$USERNAME/.pgo/pgo/client.key'" >> /home/$USERNAME/.bashrc \
+  && echo "export PGO_APISERVER_URL='https://127.0.0.1:8443'" >> /home/$USERNAME/.bashrc \
+  && echo "export PGO_NAMESPACE=pgo" >> /home/$USERNAME/.bashrc \
+  && echo "export PATH=/home/$USERNAME/.pgo/pgo:$PATH" >> /home/$USERNAME/.bashrc
   
 # install latest terraform (newer than arkade's)
 # RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add - && \
@@ -56,11 +73,6 @@ RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/home/$USERNA
 # ARG INSTALL_NODE="true"
 # ARG NODE_VERSION="lts/*"
 # RUN if [ "${INSTALL_NODE}" = "true" ]; then su sean -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
-
-# [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
-COPY requirements.txt /tmp/pip-tmp/
-RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
-   && rm -rf /tmp/pip-tmp
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
