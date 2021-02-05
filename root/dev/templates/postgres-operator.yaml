@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: postgres-operator
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: pgo
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: applications/postgres-operator
+    repoURL: https://github.com/skleinjung/pegasus-deployments.git
+    targetRevision: {{ .Values.spec.source.targetRevision }}
+
