@@ -1,0 +1,79 @@
+apiVersion: crunchydata.com/v1
+kind: Pgcluster
+metadata:
+  annotations:
+    current-primary: {{ include "postgres.fullname" . }}
+    # sync wave 10 will run after all other resources (secrets, etc. are created)
+    argocd.argoproj.io/sync-wave: "10"
+  labels:
+    crunchy-pgha-scope: {{ include "postgres.fullname" . }}
+    deployment-name: {{ include "postgres.fullname" . }}
+    name: {{ include "postgres.fullname" . }}
+    pg-cluster: {{ include "postgres.fullname" . }}
+    pgo-version: {{ default "4.6.0" .Values.pgoVersion }}
+    pgouser: admin
+  name: {{ include "postgres.fullname" . }}
+  namespace: {{ .Values.namespace | quote }}
+spec:
+{{- $default := (default (dict) (default (dict) .Values.storage).default) }}
+{{- $backrest := (default (dict) (default (dict) .Values.storage).backrest) }}
+{{- $primary := (default (dict) (default (dict) .Values.storage).primary) }}
+{{- $replica := (default (dict) (default (dict) .Values.storage).replica) }}
+  BackrestStorage:
+{{ include "postgres.storageconfig" ($default) | indent 4 }}
+  PrimaryStorage:
+{{ include "postgres.storageconfig" (merge $primary $default) | indent 4 }}
+  ReplicaStorage:
+{{ include "postgres.storageconfig" (merge $replica $default) | indent 4 }}
+  annotations: {}
+{{- if .Values.resources }}
+{{- if or .Values.resources.requests .Values.resources.limits }}
+  ContainerResources:
+{{- if .Values.resources.limits.cpu }}
+    limitscpu: {{ default "" .Values.resources.limits.cpu | quote }}
+{{- end }}
+{{- if .Values.resources.limits.memory }}
+    limitsmemory: {{ default "" .Values.resources.limits.memory | quote }}
+{{- end }}
+{{- if .Values.resources.requests.cpu }}
+    requestscpu: {{ default "" .Values.resources.requests.cpu | quote }}
+{{- end }}
+{{- if .Values.resources.requests.memory }}
+    requestsmemory: {{ default "" .Values.resources.requests.memory | quote }}
+{{- end }}
+{{- end }}
+{{- end }}
+  ccpimage: {{ default "crunchy-postgres-ha" .Values.ccpimage }}
+  ccpimageprefix: {{ default "registry.developers.crunchydata.com/crunchydata" .Values.ccpimageprefix }}
+  ccpimagetag: {{ default "centos8-13.1-4.6.0" .Values.ccpimagetag }}
+  clustername: {{ include "postgres.fullname" . }}
+  database: {{ include "postgres.fullname" . }}
+  exporterport: "9187"
+{{- if .Values.resources }}
+{{- if .Values.resources.limits }}
+  limits: 
+{{ .Values.resources.limits | toYaml | indent 4 }}
+{{- end }}
+{{- end }}
+  name: {{ include "postgres.fullname" . }}
+  namespace: {{ .Values.namespace | quote }}
+  pgDataSource:
+    restoreFrom: ""
+    restoreOpts: ""
+  pgbadgerport: "10000"
+  pgoimageprefix: registry.developers.crunchydata.com/crunchydata
+  podAntiAffinity:
+    default: preferred
+    pgBackRest: preferred
+    pgBouncer: preferred
+  port: {{ default "5432" .Values.port | quote }}
+{{- if .Values.resources }}
+{{- if .Values.resources.requests }}
+  requests: 
+{{ .Values.resources.requests | toYaml | indent 4 }}
+{{- end }}
+{{- end }}
+  tolerations: []
+  user: {{ default (include "postgres.fullname" . ) (default (dict) .Values.dbUser).username }}
+  userlabels:
+    pgo-version: {{ default "4.6.0" .Values.pgoVersion }}
