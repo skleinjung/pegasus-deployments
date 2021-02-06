@@ -1,0 +1,7 @@
+apiVersion: v2
+name: postgres-db
+description: Helm chart for creating the a PostgreSQL cluster with the Crunchy Postgres Operator
+
+type: application
+version: 0.1.0
+appVersion: 4.6.0
