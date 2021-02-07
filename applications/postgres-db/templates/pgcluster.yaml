@@ -5,6 +5,12 @@ metadata:
     current-primary: {{ include "postgres.fullname" . }}
     # sync wave 10 will run after all other resources (secrets, etc. are created)
     argocd.argoproj.io/sync-wave: "10"
+{{- if .Values.keepBackups }}
+    keep-backups: "true"
+{{- end }}
+{{- if .Values.keepData }}
+    keep-data: "true"
+{{- end }}
   labels:
     crunchy-pgha-scope: {{ include "postgres.fullname" . }}
     deployment-name: {{ include "postgres.fullname" . }}
@@ -23,6 +29,7 @@ spec:
 {{ include "postgres.storageconfig" ($default) | indent 4 }}
   PrimaryStorage:
 {{ include "postgres.storageconfig" (merge $primary $default) | indent 4 }}
+    name: {{ include "postgres.fullname" . }}
   ReplicaStorage:
 {{ include "postgres.storageconfig" (merge $replica $default) | indent 4 }}
   annotations: {}
@@ -47,8 +54,16 @@ spec:
   ccpimageprefix: {{ default "registry.developers.crunchydata.com/crunchydata" .Values.ccpimageprefix }}
   ccpimagetag: {{ default "centos8-13.1-4.6.0" .Values.ccpimagetag }}
   clustername: {{ include "postgres.fullname" . }}
+{{- if .Values.customConfig }}
+    customconfig: {{ default "" .Values.customConfig | quote }}
+{{- end }}
   database: {{ include "postgres.fullname" . }}
+{{- if .Values.metrics }}
+{{- if .Values.metrics.enable }}
+  exporter: true
   exporterport: "9187"
+{{- end }}
+{{- end }}
 {{- if .Values.resources }}
 {{- if .Values.resources.limits }}
   limits: 
@@ -73,7 +88,17 @@ spec:
 {{ .Values.resources.requests | toYaml | indent 4 }}
 {{- end }}
 {{- end }}
+{{- if .Values.tls }}
+{{- if .Values.tls.enabled }}
+  tls:
+    caSecret: {{ include "postgres.fullname" . }}-ca
+    replicationTLSSecret: {{ include "postgres.fullname" . }}-repl-keypair
+    tlsSecret: {{ include "postgres.fullname" . }}-keypair
+{{- if .Values.tls.required }}
+  tlsOnly: true
+{{- end }}
+{{- end }}
+{{- end }}
   tolerations: []
+  shutdown: {{ .Values.shutdown | quote }}
   user: {{ default (include "postgres.fullname" . ) (default (dict) .Values.dbUser).username }}
-  userlabels:
-    pgo-version: {{ default "4.6.0" .Values.pgoVersion }}

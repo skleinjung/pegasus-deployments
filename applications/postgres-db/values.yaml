@@ -1,14 +1,30 @@
+# Reference: https://crunchydata.github.io/postgres-operator/latest/custom-resources/
+
 ccpimage: crunchy-postgres-ha
 ccpimageprefix: registry.developers.crunchydata.com/crunchydata
 ccpimagetag: centos8-13.1-4.6.0
+# customConfig: references a custom ConfigMap to use when bootstrapping a PostgreSQL cluster.
+# see https://crunchydata.github.io/postgres-operator/latest/advanced/custom-configuration/
+customConfig: ""
+# keepBackups: if true, the pgBackRest PVC is kept if the cluster is deleted
+keepBackups: false
+# keepData: if true, the PostgreSQL data PVC is kept if the cluster is deleted
+keepData: false
 # fullnameOverride: 'my-app'
 namespace: default
+metrics:
+  # metrics.enable: if true, deploys the crunchy-postgres-exporter sidecar for metrics collection
+  enable: true
+
 pgoVersion: 4.6.0
 port: 5432
 
 resources:
   limits: {}
   requests: {}
+
+# shutdown: if true, indicates that the cluster should be shut down (otherwise, running)
+shutdown: false
 
 # any unspecified values and/or storage types will use values from 'default'
 storage: 
@@ -29,15 +45,27 @@ storage:
 
 # admin postgres account
 superUser:
-  sealedUsername: AgCSlbksaBjyJFORDxLNc5lySRBjvfe5Xsr6bI15bOkiC1JMSEtUkxz/XQ/D/75ya8jeDN7MlVSGo+I40wBh8Lycczh39dB8sXSxiA9AmFvizucKD2NmpMYoEmaEUi2PDezMrIbCaEo5Od5/8poM07PYyBUsaoB1ygoN/yEeliaABVzT8l9BdlcnG1oHW/B+XFlisELTHRP4cOFywkYWFXYhEjVZqZKKJ8x7boPfv0PZeNN6tRhG6VODWDACvoE/yivLkQ6LiJUcpnFAkZioRe/ZxfDJQjcrpzmCyp9Er1gRDfdGg7G3VUulQnxyZWiwp9oxAwrm7rSDSxpK7ZU+wKfTUrLcU9LNO+LY40VkTtU1P/ldpkRUR9BPfMqcjMG/efMe6ZAcPSFec0eDY3HlrBbVFq1QIAx7vQM59xP4JfegpEXmJ4KkYRkcVF55yMVesy41IJmtDXFYOOJR6LF2MPAubkqmWNKLjEedWXyQmTnCb8+PGaZuAYpls7frCW7M4/tMK7Q10xsifUmCyKyyR23ISJqWX9GBIHyI/vW+3ENxTTO/qOWlR7r6SbZb/JuefCgBz919AsW7IJsEjlUQd+V3A7Lr8Bf/QxNFKmvGjFEbaQ5SObzibU05pAc9ZcVwTF+8cMlvDkCPB/FHlk3ejbC0DjOIq0Jd5+u73VnQqngfw8foB0fVUjH9pydcmhmqpJvmyDWgmtViAw==
-  sealedPassword: AgAL1y46HvJ7og3s3T1g3sp9a+c5vbMe8EGGnwq745MJzWrCGSmQLwwOYBBsq1wxXGe0wZJfkIcsegu+/oyO986EqC5I/HuoLRhQicloN8b2LqR9Fcz3gyCOHT8kJPfi4S9Nc2mu8pfRahVQLv3sDuD1EqKx5DgIWIQ792PPNaCiUdajSdLXn/yv0Y6MCKjnItswDVugTWgAX1mJhsvKBbHOGF+B00DepdZ1NcUmQQtK//RgFs92G5/P9OF/CuraymvpG0HToKn2fDbym46UtK6IvWM8Rl7F0NXIqzCgMoVvWjor1j5AYl287C+XLTUKYuEppU3vO/GnMSed4fI1w46cDCusgVGzhQ5AmylIs0TSA2fRWQeM1IMhcnik6PJ3ks2P/cF7dudIQYNVGSR5YPofUs3WgDmMKdzVMtJitAMl9ckO2Klm+X7gqRiR7TcdcijM9kIV0l0DiXhTks3TCgb7CLhqssuewMrCVYJlUhYjxajDpRDZ24sohaDEnge9ogn2fUaQrp0HhVJCF4vZcRQPXDuPEEr5cG7NeTPyIdxDltcCzK+zDDZkDzFna9y0HngzMEXfKWdp2EljvNGVqYR85L1rRqLRIfxuiKpmY0o0rlK0r7raqmZ9s5UKuHe5GlyesT8b1Bo3sni1At/j20rKK29+GhnI3uxp6cfkJyicFjeMMmVs9WVoWDk7APJEY8Kzex/jnfrrzZ86wk7wPkVxy6XteBbDHspzeMOJpuLdQIriUezX
+  sealedUsername: ""
+  sealedPassword: ""
 # standard user
 dbUser:  
-  sealedUsername: AgBAbpxN7ZWBETCFJF/7t1mg52i9gVqmOvRnc8H7g9oymMRdon9t8rWZrHt7B9xzxs8H1zATULQJTaOIC/X0b6YWt3KWai07c/gN0dPekgP3LbMwX0QHEEAP9J/P/yPYAyAP7av5xBDBU/ohyAmBzvinh0ZjeYsf5ryMnBgPeNlllFwqjJU+NbMEUaAvt7u5e/Ptz7sUcYwp6/F4mAkPjWjpXd6yzrHIQWrTDoQI5gDzfJJdMVtPSb9jkOMyczNmBYuT8MR0BUiAVgKNQHbQr2TCh6JkQQ2dzVSIaV+3H5/F4yUWQ3LWHnTS0keXIRAT6I8+8NEBtgls88jBXmhX1xaX34pIRnBIumk/MNi1WGK7cW8dl6Zq99hfMB8KCTePboV2uSAM9Fmj46ua1NBPjKteXENwLogH3Xs53bWKwY1hq4Wu/ue8z0wGAICo2HXxY5vPiWT6ctTqOwU/NQiZYeH5ohVlYfUmzBHaTYFzs1Pzvi/dFn9cTMX/+ScWHlg/tdEBwUlIbBUfUUJ3htcWU0pzwDjmkXJlASL64B+WvOUb9mG3VY+JwId/h4tcH15A7KQecJrPHdcvBqbc7x7NOGBV9YfCJ8PzTKabexNU1dtc4wKKG0g2q+vf/Gk0c+nvZzbZl6O7qbOdl0SlojLlou6kcokf3uXEoljsY+pEMRHDFdk+XAdEijJ/EaOuUhI8ck1GzR4an79uGg==
-  sealedPassword: AgAeDRHIhIIEW+2VBm8EIlbLQexJGTYKT1JsfU0uADuSXvcOmMgAgXKwDseGPSiZpcQ5mDoRvxVPkOtKUF8vcblsSo7K7aGmxr9wM060UlNOMBf+E6LXnOHidnN0xFhmX6Zv29YejEoeZWX5XEyGX+G2NuI0O6HwXrORiBWnx05s/zS8v2Gue9BTtMrcIzdABbbsr7HMZBa6NmsKvz4M5VSKpPXslq6FL+9sE+TIonCrKvfYaRZRTx7HL/hS20JbdpMq7Td9Ax2Xu5klv3QG3BsyUPaQLBR3xGMA08ops6VSQqgpVq8fbWtGSG0gghiM0n3c6G+Q2OoQcs8DrKOIFth7CBevwM3/uyVp75+8pnI2yBgxmx3xTUmSmWrHoQEtcTpr+ZHHWtZRwIvoYUY5ZyNjJoPYlXNePCTvIeaoJdCZcOFthk7tesWVEeHseiuAw4UUWcEh+tvxtMLg/Dxm2mH5yhKGwYflSNl+cE65qiv6gKQeR05Id3mBVujFk7iqJm7y3S9TaJPkpiwqjEd0i7S0T+AIB6uKTofNKVmwQ2QPdNmhaHsAzLESQ6AKofUE9U0WF/uMDUrIDcbutsRQy0kqQQVKqZm6/hcca6kML/DR4Bjc3EdiwfRU+PTN81vFYyqq4Jki0oJ+kiA84os7WDbzYkbmBe+CiN1pVayPL9r2yn9JzUplvuH2bDw24NOCX+P8E2N5z0NY6g9KRIvVvK5VOPC1GUEiXEo=
-  # # replicationUser.username: plain-text username, must match sealed version above (defaults to cluster name)
-  username: pgdbtest
-# primary user for replication
+  sealedUsername: ""
+  sealedPassword: ""
+  # dbUser.username: plain-text username, must match sealed version above (defaults to cluster name)
+  username: ""
+# primary user for replication, defaults are probably fine since it isn't needed by end-users
 replicationUser: {}
   # sealedUsername: ...
   # sealedPassword: ...
+
+tls:
+  # tls.sealedCa: certificate authority for the PostgreSQL cluster to trust, encrypted by SealedSecrets
+  sealedCa: ""
+  # tls.sealedCrt: TLS certificate for the PostgreSQL cluster, encrypted by SealedSecrets
+  sealedCrt: ""
+  # tls.enabled: if true, enable TLS (ca and crt must be provided in that case)
+  enabled: false
+  # tls.sealedKey: TLS key for the PostgreSQL cluster, encrypted by SealedSecrets
+  sealedKey: ""
+  # tls.required: if true, requires client connections to use only TLS to connect to the PostgreSQL database
+  required: false
