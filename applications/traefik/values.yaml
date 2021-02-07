@@ -15,6 +15,7 @@ traefik:
     - --entrypoints.web.forwardedheaders.trustedips=10.0.0.0/8
     - --metrics.prometheus=true
     - --metrics.prometheus.entryPoint=metrics
+    - --providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik
   envFrom:
     - secretRef:
         name: acme-secrets
