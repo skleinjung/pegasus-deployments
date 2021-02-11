@@ -1,4 +1,7 @@
 functionNamespace: openfaas-fn
+openfaas:
+  operator:
+    create: true
 traefik:
   entryPoints:
   - web
