@@ -1,15 +1,59 @@
 hostname: dev.jenniferkleinjung.com
 
-encryptedMariaDbRootPassword: AgBeZGbV1I6NRych3M2Te7q6oH+XTypTdOdtJPYqNPfZeoc9wszPWXw7spzbQAc/nrrDm+DH3LSgfxobtiXDxB6xmP/JML9ErdpiFOgGtVq7dFrpJO+seRNE/4A+PaWC4QlUfoqJ6vN03j99fAksOSoREFbH865CZstY/eHjwK287pbg5OTpdVN6MdQhSBMz7kjoiS7tUZWbFrkcy1hAZtMCLcErsiDOTJZ021aOO+9VSjk8vEd9E4eozPX5Gimr0VFM0As5MhjClR9bFfWT7eQxXJFP2sMYh4gW45YpR9fKKxbBBYHfUUs4xUfDHYp3ocntSTzxj4ywRKCjBoKEwlRK/PdowfBz2+WC2bNcWLUx//6rNyguQupd+cgJUXdV4eVP7ML2Z2ZijP3Z8fv13/8hG/gcSjudIpHJ+Cl39ocyXvIJCZ7JRmrpeCfSL26zxS/gSeng1wFIzCQG7aclO80XvlH0pDRpsNAGKRoCiif1WG0ODkPEppVLmfd04UJ/rR2/Z6C5c/HkR8aBhN/4ewNL/3uCY21Dgk/eQL6hCffbBm98HTydMseXoJPZtlOL62xvZrd2IJSRBaGyRSjjjpg0rIPUMHJoZ5CnUyDI67rgvO+wxY3vBQn8w/h8UlYMVgiNOBilpxChRGurtzpYopJkEMjVuM4gEjy6A8WvvdAa9/3qKBrWC6VHkV+5vUgYzn2P5xg/xgWO9EQ9XAQFiDg5GpGm3B21T/8I4e6PERGw+hI=
-encryptedMariaDbReplicationPassword: AgB6KNgOMqJLEJGziY+/O3Srl3NWS4oSlNBJk1I+ROtkE8ntF8hYHU0AFjucplGJpfEw/oFrR5d+R+XKHaSEJ2xCS7Sw7XbHK45iucvD9uolfJTfFIt8vAifTSYKRQSsO5NEjv0SFWHKQRy3uE5yJEvFVFsqLV0bjqLYHz0Z7jjQylMmifyw87qROpGXOrlzSXOc4FAx+Nzj2sMCTt3KVndCky2Sy2Wec2SqXbqZAe0UaenXlxMLuMli9aQfVjY5OnQVVmBpsmbjT1bzIX26x7IhKuyjYbJXTR/YIm0jH2fPKfdbsqTHrg74mj7x6PiFodGk/IbyUfPIPd4MaGIpQeUn8UcahLGfD/ys3wRnvE8HcduGbcEbmlzzzE8Kd6uW6v5WayTrVc91PthWY4GB+YpjJdR4jC9/kq8hzungc2iPT5ImhwMpzUy+NgBl3tlwB0h0PfMOJFpCeMfLEBAhlUlAO1BAbQbZh4h5Yyf26fv5ZlGcm5Sjg8IMrKpdFUigZNyIpJkxmIEckOx3EE+mZe+cuGBk94/v2EP1CX1vsb8sVRz07QED63LTyigh1DmhO6u5OZ8EMYd2JOFY01nr5XnGJH7xzDQeSiJ3elTaM26br1TwwoXMwFdevaZw1g2s8t0Qd0rmB6TIWcc4XSigOiOK8HBiZZSjXzZ+BPdkkng0eyeNuEu4JU1zttXcQLQnpBtfaOfmFTYdrDbo2eKV0AVCiOSJGEwJouQSOAt3yVG2
-encryptedMariaDbPassword: AgAWgLeEupRB02pB7irMJV4Jj23KxTE3wyZyroLyqY8snJwf+/nHMjbAUJVCXBtaY9t7iXeC1pFikgnnP/FpUwmv26VC26IWihUS9LK72UEH3t4twEWfEWoVu+yqT8J/rZhqRuNTHuOOvMJMU+Ys24behR5m9MtUVIMv3k8/XF4LpCM7LCKORK8+yBXXmZMblkK4ivf6x8hiN7IfUaLPGR4gVvAMDnsa5HZpKFtrtTav55UqWgRxcHuP/ldz/Bd3+GHV/sVAYktNfXnzaKSi4LlMnPC32TfV9lOIe1Gr6MoJCqtdRMW1g+thUgF3LS/Nbn/8dUQcigFyKjSBBE8R6Ntg2rmsJ/IM//P6+Fc5sU1VOBJ8dgJnauRgUMK6RJPcopg8PKe6qLzrEZShauwiDkkOyLr7K8DI5UD3w0Lhup6Num0Vfi/YDtHhwKkgEFGTUTqLAnYh+mkgpax7O3n+T1IQ4aB3J9eMKdO+TYjIvE01nE7h+KE6N8IeBqlluvWygxQNk/+bkp4uSHVcp+7UER6wRmUPJpKusbNCoOQEFm1GiiHzILurUpH688AwCX0f7JG0l5FzmbWhmxlgcLHIDDYUZ/qFhDCMPBfNH10Zp275j0ihicC0eCDqBN/4rItJNa3wj6r8LF0TzMMEEc9t+/GN8Ejb55qMhu6LgmZGMAi8zBT4gn4Qd2nMhEzP2oQLawNrw7q1yu3kvDXpWftF5F0MhbXqECs77PJwzTMk4w==
+encryptedMariaDbRootPassword: AgCPqblZhJea+4H3n/YNkNRB4njVkgSDF9FiCLeHm175y8zdYFSYOW5tBoWYL6teB1p2qpNibiEnCdWU9vJiKxMRTN1RkdhLDlL49tQRIvlyNoXLTvxT3LNxRhuIh21NPSVECLFf2wAKw6pl1/G0fRF7WFGgbRMc+8/rNHPSmjrehnbJ6Ea/F16+q9WbMZqJBm2SVu5LibASJOlSlJ9asmqewOshLLMUjWxv7K+COSZFwRKCWc1OZD1JNrSWZ2pspbyhPApb2GK8gR3Mr7xZ/jIObo90XKbviYNNgKku+KQ2Ob2Z9sp8iygoSxJvjObT1f71HTzrzwgbunl5FMJEoj/HQllw29wRKkcafQ3DF9woprP9Jwm/TyvZlAZoLoEs2z4nn7VnNVWa6Q0G49hHqYa8LSaVZyip6y5A8FUppBpv7xiybMLlYkEqhfSItKn5du6wAPu3rpA3RyA46vQmkDfSKBqfXdCmaLjSHXhapodfENnL4+TeVkzEVlvtrxaSyjEvBHSDm8ZOjKRG52yHqwWpben7DrBcKolNPtSopIEPWHAesG9XMKNT3mOH0XHJvevEarb6Mynyg0PDcby3k8BGQntABDb0401eJ5ikWntslEl6E39rcCIXQX4UBgzER0DozFRvx+Y2+/AszqZygIpq6ZAjjGHXvdlgAQMrvd4CvP5V/OcDQYcOsyiBYJnWikkXZxB4f2FQ8PjvrmxX5hhiVvaOoMwscqg=
+encryptedMariaDbReplicationPassword: AgB+CasxOuQBRcZw2ivji3gd5Q3LauafAILMSPNWmQoma+JinOW6i45J/Wj/QgxQmpai9XHisYiZaRE/PNyPlhdqy8jssi/TGX0uOspQvDJoOnqFYE8xlZt6RARYc89SZQmoni8QK+PUBrdCmL17TWLuMULi1rBjxB51NfC/EnmAK2BdlOSC4XeQVHqc584FKn6ztdIQXgLAxkxh8MdSlAL3U7MnJf/cVaRnllsP8NBYhpQcpGU6LNEVGimCMDa9B4xGV96dS2lJxDffX2y/mcYEAtyodIEr1GvSqJrijby3BL/huGljWyFNYQ1riejiMZE83OqB9BKmG3yaHSDWuuGefG/OSXa/6NQ8P5Dht8Ap4wYCa3UfS2lvA6Mi7nTYCXq8oxrOMyUg565RaIuqdtyjKmY1msPpE863v59eIlxtWaXtDqR6s+GO+u05JCKOeUDzg75bNoUWNEdo4My1z053pG3nJNIPQ9Ev6G0BEMqGHH/uJEpkXlYDCDb9jsz/pqbMz+2hvbXK8V9j5WnBiW0QDPIL8nWsFOpUX+Hztl/bjroMk6mFgBJAW9GtWaGd1RSjaP9GTk7vE1z2/9sIsoFQ/R3noK7iTrxcKTKqjbSdJUrUdDzp1THHP2kU+2UCI78Vm4kLtff40k6DSPXLMlpralRvsvY+rjEhBak5tbtEzjfxi7CDRIc6xdfqLtv9yNKjETHHGsIds/NrAo7lASxoxSBpGGUX
+encryptedMariaDbPassword: AgBG8vTbcuQY4pL8UEayO7Ah0VpjHwbUkxC6vP0ledtjqGcSXLIUNYxGoSwds1cY75dKvKgcUkBS3PDT7Q2B5kJ9sy4S0mrdbgMRwEQksnZEvxQZJ80TjxEyc3hkih17RcfQMFcvcMZKUiXTbntg8D7uSFxnalVdyyLI4IrjdBRjDJUXiZ5KvebkRQ7Z9xkgZDv+9cjP4Dd+gtsln57xquApguVJVG/CaxqtK0eN9fwSAFaa6eS2725liYrB2xdZJMlOAplT5fSWJaOuJl/K18Vu1zzm2iEgzfjsnQzn0iUUoN0em0QDP3JWOVc8sI9CpQl+8dW9IQSV+J3UiSYDPGhPtH2t1xh0dhujddcr3GhwW63n1MgoHPA/q17NaQBOIRx4Hq2lhXOqFnsB6zkjNtz/xcyXUVQtyqJhhwfF4AXDntcxmU3/SHMPC21Jf7VqMq8ze3PfHyEZibGfzL9Kf5P0qVqZ+qhWvA19R4t7dtzWYpkF4zrq/WrKiW669/P2qtEQxdI7JK9SSb0HoIB2wDbB567GSzeVX/8IslM3338wayc1Alz2495FKSJXXnj83ns4V7gDYCK0z0DG8kyKWzCdSz3O53cfkthTBakGLbmuHjHMfgQ/KjTE1d1vQxCnT0BVIUP8GeLdFPM/cPo0Sm2jfZEYOm6qC7xFeRcZuXet/MU4nUFr0Bo0zslnw43nSW8/XNaBh3Y4GMepZyANVENVzJrmeso=
 wordpressPassword: AgCC7+o//KqnFtzIo66h238YHh99+O8vYsjARD89Ku6VZKqXWyLDn76/EhGfreaVsvkSllFSbdyee4qpbM3N+LxVvelr/TFf5bUBDCfp7GU32+QEy+cMDXsNvwj8+lWB/zPOv/bL4RWrj0Y6F90RfI6VOXwc59q5qqiYHUypGmyZrZE7+KEYnTF1YSq3muDYHw6Wi9tjHwfAP31WNEeGCUhdExw33DrpRkyojM/KVU7lcd7i+DPxTKAx3x2WViUdUqbWUOh8SdREinK7M3Df3nBWyB49Nv5w1iMM4Z5UzQb8kTsNcbClZqp/5GE4+TmYeG2DJt7v5Hg7q+hiRxnRE6ZK3eB6cI9s6cNI22U11KVRhyHNJrRrFIam5zW78MNoW7ErUmEEIDEbknIxYZ4OqqhBqRkapsU5LaAZWnQZEtxtTyCtVW1Lff6u+4Rwz4SXDBYRjKYmA/B4oS8hS74TUD+lUx/0vm8crsViUVIKsy1pVz4HUDREUF3+gkaPdohwOKO4Livb/ZCPr/VewIOKtQ73shj621RMuh+yzitUadkidKf07lsAgvb2viLZlvBQ+vwz7Oox8Z2pu8SbTGYhREK8uBKXdixiW4clrFCM5tBuK1JYYx4YsfUi9QOxBvBWDoHIP7VSlF6QT6jrTT43Fom6lTcSeHwt08Bbth5jQWIqsaYclXNeCviSxR8nPeuIqTlQ1i075dy7Sc8Gxrpmj0XPdcyt7jcUT+w=
 
 mariadb:
+  architecture: 'replication'
   primary:
     persistence:
       existingClaim: ''
+  secondary:
+    configuration: |-
+      [mysqld]
+      basedir=/opt/bitnami/mariadb
+      bind-address=0.0.0.0
+      character-set-server=UTF8
+      collation-server=utf8_general_ci
+      explicit_defaults_for_timestamp
+      log-error=/opt/bitnami/mariadb/logs/mysqld.log
+      max_allowed_packet=16M
+      # this is needed to run in memory-limited environments
+      performance_schema=off
+      pid-file=/opt/bitnami/mariadb/tmp/mysqld.pid
+      plugin_dir=/opt/bitnami/mariadb/plugin
+      port=3306
+      skip-name-resolve
+      socket=/opt/bitnami/mariadb/tmp/mysql.sock
+      tmpdir=/opt/bitnami/mariadb/tmp
+
+      [client]
+      default-character-set=UTF8
+      plugin_dir=/opt/bitnami/mariadb/plugin
+      port=3306
+      socket=/opt/bitnami/mariadb/tmp/mysql.sock
+
+      [manager]
+      pid-file=/opt/bitnami/mariadb/tmp/mysqld.pid
+      port=3306
+      socket=/opt/bitnami/mariadb/tmp/mysql.sock
+    persistence:
+      enabled: true
+      existingClaim: ''
+    resources:
+      limits:
+        memory: 1024Mi
+      requests:
+        cpu: 250m
+        memory: 512Mi
 wordpress:
+  externalDatabase:
+    database: jenwp
+    existingSecret: jen-web-mariadb-db-secret
+    host: jen-web-mariadb-primary
+    user: jenwp-a
   ingress:
     hostname: dev.jenniferkleinjung.com
   persistence:
