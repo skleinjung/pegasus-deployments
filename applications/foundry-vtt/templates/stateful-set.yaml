@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "foundry-vtt.fullname" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: {{ .Chart.Name }}
+  serviceName: {{ include "foundry-vtt.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          env:
+            - name: FOUNDRY_ADMIN_PASSWORD_FILE
+              value: /var/run/foundry/secrets/admin-key
+            - name: FOUNDRY_LICENSE_KEY_FILE
+              value: /var/run/foundry/secrets/license.json
+            - name: FOUNDRY_OPTIONS_FILE
+              value: /var/run/foundry/config/options.json
+          livenessProbe:
+            httpGet:
+              # /api/status seems better, but creates client sessions and spams logs -- this was the smallest file I could find
+              path: /icons/vtt.png
+              port: http
+          ports:
+            - name: http
+              containerPort: 30000
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              # /api/status seems better, but creates client sessions and spams logs -- this was the smallest file I could find
+              path: /icons/vtt.png
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          securityContext:
+            readOnlyRootFilesystem: true
+          volumeMounts:
+            - name: config-volume
+              mountPath: /var/run/foundry/config
+            - name: data-volume
+              mountPath: /srv/foundryvtt
+            - name: secrets-volume
+              mountPath: /var/run/foundry/secrets
+      securityContext:
+        fsGroup: 1001
+        runAsGroup: 1001
+        runAsUser: 1001
+      volumes:
+      - name: config-volume
+        configMap:
+          name: {{ include "foundry-vtt.fullname" . }}-config
+      - name: secrets-volume
+        secret:
+          secretName: foundryvtt-secrets
+  volumeClaimTemplates:
+    - metadata:
+        name: data-volume
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 10Gi
+        storageClassName: nfs

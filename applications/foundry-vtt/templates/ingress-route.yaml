@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ include "foundry-vtt.fullname" . }}
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: Host(`{{ .Values.hostname }}`)
+      services:
+        - name: {{ include "foundry-vtt.fullname" . }}
+          port: 80

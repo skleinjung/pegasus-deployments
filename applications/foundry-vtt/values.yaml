@@ -1,0 +1,13 @@
+hostname: rpg.thrashplay.com
+
+image:
+  repository: thrashplay/foundryvtt
+  tag: 0.1.2
+imagePullSecrets:
+  - name: foundryvtt-image-pull-secret
+resources:
+  limits:
+    memory: 2048Mi
+  requests:
+    cpu: 1000m
+    memory: 1024Mi
